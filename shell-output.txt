@@ -1,0 +1,65 @@
+=============
+OS Info for
+ef3740a9e9bf
+=============
+Amazon Linux release 2023.5.20241001 (Amazon Linux)
+NAME="Amazon Linux"
+VERSION="2023"
+ID="amzn"
+ID_LIKE="fedora"
+VERSION_ID="2023"
+PLATFORM_ID="platform:al2023"
+PRETTY_NAME="Amazon Linux 2023.5.20241001"
+ANSI_COLOR="0;33"
+CPE_NAME="cpe:2.3:o:amazon:amazon_linux:2023"
+HOME_URL="https://aws.amazon.com/linux/amazon-linux-2023/"
+DOCUMENTATION_URL="https://docs.aws.amazon.com/linux/"
+SUPPORT_URL="https://aws.amazon.com/premiumsupport/"
+BUG_REPORT_URL="https://github.com/amazonlinux/amazon-linux-2023"
+VENDOR_NAME="AWS"
+VENDOR_URL="https://aws.amazon.com/"
+SUPPORT_END="2028-03-15"
+Amazon Linux release 2023.5.20241001 (Amazon Linux)
+*******************************************************************
+==================================
+Fetching Installed Package Version
+==================================
+php8.3-common-8.3.10-1.amzn2023.0.1.x86_64
+httpd-tools-2.4.62-1.amzn2023.x86_64
+php8.3-opcache-8.3.10-1.amzn2023.0.1.x86_64
+php8.3-pdo-8.3.10-1.amzn2023.0.1.x86_64
+php8.3-process-8.3.10-1.amzn2023.0.1.x86_64
+php8.3-mbstring-8.3.10-1.amzn2023.0.1.x86_64
+php8.3-xml-8.3.10-1.amzn2023.0.1.x86_64
+php8.3-sodium-8.3.10-1.amzn2023.0.1.x86_64
+httpd-filesystem-2.4.62-1.amzn2023.noarch
+httpd-core-2.4.62-1.amzn2023.x86_64
+php8.3-cli-8.3.10-1.amzn2023.0.1.x86_64
+generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch
+httpd-2.4.62-1.amzn2023.x86_64
+php8.3-fpm-8.3.10-1.amzn2023.0.1.x86_64
+php8.3-8.3.10-1.amzn2023.0.1.x86_64
+*******************************************************************
+==================================
+Fetching Installed Tomcat Version
+==================================
+Using CATALINA_BASE:   /usr/share/tomcat
+Using CATALINA_HOME:   /usr/share/tomcat
+Using CATALINA_TMPDIR: /usr/share/tomcat/temp
+Using JRE_HOME:        /usr
+Using CLASSPATH:       /usr/share/tomcat/bin/bootstrap.jar:/usr/share/tomcat/bin/tomcat-juli.jar
+Using CATALINA_OPTS:   
+Server version: Apache Tomcat/10.1.31
+Server built:   Oct 3 2024 19:02:38 UTC
+Server number:  10.1.31.0
+OS Name:        Linux
+OS Version:     5.15.153.1-microsoft-standard-WSL2
+Architecture:   amd64
+JVM Version:    17.0.12+7-LTS
+JVM Vendor:     Amazon.com Inc.
+*******************************************************************
+==================================
+Fetching CronJobs for Tomcat User
+==================================
+no crontab for tomcat
+*******************************************************************

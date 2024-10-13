@@ -1,0 +1,53 @@
+---
+ - name: Fetching OS,Package,Cronjob details
+   hosts: localhost
+
+   tasks:
+    
+   - name: Fetching OS info
+     shell: |
+             echo "=============" > ansible-output.txt
+             echo 'OS Info for' >> ansible-output.txt
+             hostname >> ansible-output.txt
+             echo "=============" >> ansible-output.txt
+             cat /etc/**release >> ansible-output.txt
+             echo "*******************************************************************" >> ansible-output.txt 
+
+   - name: Fetching Package Installation For RedHat based distro
+     shell: |
+             echo "==================================" >> ansible-output.txt
+             echo "Fetching Installed Package Version" >> ansible-output.txt
+             echo "==================================" >> ansible-output.txt
+             rpm -qa | egrep -i 'httpd|php' >> ansible-output.txt
+             echo "*******************************************************************" >> ansible-output.txt
+     when: ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat' or ansible_distribution == "Amazon"
+
+
+   - name: Fetching Package Installation For Debian based distro
+     shell: |
+             echo "==================================" >> ansible-output.txt
+             echo "Fetching Installed Package Version" >> ansible-output.txt
+             echo "==================================" >> ansible-output.txt
+             dpkg -l | egrep -i 'httpd|php' >> ansible-output.txt
+             echo "*******************************************************************" >> ansible-output.txt
+     when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Debian'
+
+
+   - name: Fetching Installed Tomcat Version
+     shell: |
+             echo "==================================" >> ansible-output.txt
+             echo "Fetching Installed Tomcat Version"  >> ansible-output.txt
+             echo "==================================" >> ansible-output.txt
+             sh /usr/share/tomcat/bin/version.sh >> ansible-output.txt
+             echo "*******************************************************************" >> ansible-output.txt
+
+
+   - name: Fetching Cronjobs for Tomcat User
+     shell: |
+             echo "==================================" >> ansible-output.txt
+             echo "Fetching CronJobs for Tomcat User" >> ansible-output.txt
+             echo "==================================" >> ansible-output.txt
+             export out=$(crontab -u tomcat -l 2>&1)
+             echo $out >> ansible-output.txt
+             echo "*******************************************************************" >> ansible-output.txt
+
